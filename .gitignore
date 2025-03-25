@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Directories
+.vscode
+__pycache__
+plots
