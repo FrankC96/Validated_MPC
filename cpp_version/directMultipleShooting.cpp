@@ -116,7 +116,7 @@ void run_sim(int sim_steps, EffectiveVectorMultivariateFunction f, BoxDomainType
     IntervalDomainType tdom = { 0.0_x, h };
     RealVariable t("t");
 
-    for (int i = 0;i < sim_steps;++i)
+    for (int i = 0;i < sim_steps / h.get_d();++i)
     {
         std::cout << "Simulating step ---------------\t[" << i << "]" << "\n";
 
@@ -152,7 +152,7 @@ void run_sim(int sim_steps, EffectiveVectorMultivariateFunction f, BoxDomainType
 int main()
 {
     const int num_shooting_nodes = 5;
-    const int sim_steps = 20;
+    const int sim_steps = 1;
 
     RealVectorVariable x("x", 2);
     RealVariable u("u");
